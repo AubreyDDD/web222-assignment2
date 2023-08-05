@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!--Auther: Aubrey Du-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store assignment by Aubrey Du</title>
+    <link rel="stylesheet" href="store.css">
+
+    <script> 
+
+        function fVerifyInput(e)
+        {
+            console.log(`${e.type}: key = ${e.key}, which = ${e.which}, charCode = ${e.charCode}, keyCode = ${e.keyCode}`);
+     
+            if (e.key >= 0 && e.key <= 9) 
+            {
+                return true;
+            }
+            return false;	
+        }
+    
+    </script>
+</head>
+<body>
+    <article class="container">
+        <h2>Cosmetics</h2>
+        <select>
+            <option>&nbsp;</option>
+            <option>Foundation</option>
+            <option>Lipstick</option>
+            <option>Mascara</option>
+            <option>Eyeshadow</option>
+            <option>Blush</option>
+        </select>
+        <input maxlength="3" type="text" onkeypress="return fVerifyInput(event);">
+        <h2>Skin Care</h2>
+        <select>
+            <option>&nbsp;</option>
+            <option>Moisturizer</option>
+            <option>Cleanser</option>
+            <option>Mask</option>
+            <option>Sunscreen</option>
+            <option>Eyecream</option>
+        </select>
+        <input maxlength="3" type="text" onkeypress="return fVerifyInput(event);">
+        <h2>Hair / Body</h2>
+        <select>
+            <option>&nbsp;</option>
+            <option>Perfume</option>
+            <option>Hand Cream</option>
+            <option>Hair Dryer</option>
+            <option>Hair Brush</option>
+            <option>Hair Color</option>
+        </select>
+        <input maxlength="3" type="text" onkeypress="return fVerifyInput(event);">
+    </article>
+    <article class="button">
+        <h6>&nbsp;</h6>
+        <button  onclick="alert('Order succeed!!! Thank you for your purchasing!!!')">Order Now</button>
+        <button  onclick="alert('Sorry to hear that you cancelled your order!')">Cancel</button>
+    </article>
+</body>
+</html>
